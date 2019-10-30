@@ -15,6 +15,18 @@ pensar otra vez.
 
 public class Main {
     public static void main(String[] args) {
+        Filosofo[] filosofos = new Filosofo[5];
+        Palillo[] palillos = new Palillo[5];
+        for (int i = 0; i < 5; i++) {
+            filosofos[i] = new Filosofo(i);
+            palillos[i] = new Palillo(i);
+        }
+        Mesa m = new Mesa(filosofos, palillos);
+        for (int i = 0; i < 5; i++) {
+            filosofos[i].setMesa(m);
+        }
+        m.start();
+        m.empiezaLaVelada();
 
     }
 }
