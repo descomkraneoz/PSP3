@@ -21,7 +21,7 @@ public class Buffer {
             }else{
                 semaforo.acquire();
                 System.out.println("El semáforo ha sido cogido por el productor ->" + identificador);
-                System.out.println("El productor " + identificador + " esta produciendo, espere un momento.");
+                System.out.println("El productor " + identificador + " esta produciendo, espere un momento...");
                 Thread.sleep(1000);
                 enteros.add(valor);
                 System.out.println("El productor "+identificador+" ha producido el valor: [" + valor+"]");
@@ -43,7 +43,7 @@ public class Buffer {
             }else{
                 semaforo.acquire();
                 System.out.println("El semáforo ha sido cogido por el consumidor ->" + identificador);
-                System.out.println("El consumidor "+identificador+" está consumiendo, dale un momento");
+                System.out.println("El consumidor " + identificador + " está consumiendo, dale un momento...");
                 Thread.sleep(500);
                 consumido=(int)(Math.random()*enteros.size());
                 enteros.remove(enteros.get(consumido));

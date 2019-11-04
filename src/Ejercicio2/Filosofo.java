@@ -59,7 +59,7 @@ public class Filosofo extends Thread {
                 System.out.println("Filosofo " + identificador + " -> Tiene los dos palillos, a comer.");
                 Thread.sleep(3000);
                 //Cuando llegue aquí, habrá dejado de comer
-                System.out.println("Filosofo " + identificador + " -> Ha comido, libreando palillos");
+                System.out.println("Filosofo " + identificador + " -> Ha comido, liberando palillos");
                 mesa.palillos[palilloIzquierda].setCogido(true);
                 mesa.palillos[palilloDerecha].setCogido(true);
                 mesa.palillos[palilloIzquierda].semaphore.release();

@@ -13,7 +13,7 @@ public class Productor extends Thread{
     public void run(){
         try{
             while (true){
-                int valor = (int) (Math.random() * 10)+1;
+                int valor = (int) (Math.random() * 10) + 1; //gracias a esta linea el productor va a llenar la lista y dejara de producir
                 if (buffer.produce(identificador,valor)){
                     Thread.sleep((int)(Math.random()*2000)+2000);
                 }else{
